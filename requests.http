@@ -1,0 +1,27 @@
+@token = 436a0f4196aee831c0a856c2772a7932ed52ab5b
+#@token = 7f0fb753651faaac664d9b2ddde14e6f3cfc3b81
+
+
+GET http://localhost:8000/api/v1/articles/
+
+###
+
+POST http://localhost:8000/api/v1/articles/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "title": "Что-то интересное",
+  "content": "Интересное содержание"
+}
+
+###
+
+PATCH http://localhost:8000/api/v1/articles/7/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "title": "Что-то не интересное",
+  "content": "Не интересное содержание"
+}
