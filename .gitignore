@@ -1,0 +1,16 @@
+.vscode/
+.idea/
+
+# Virtualenv
+.venv/
+
+# Django
+*.sqlite3
+__pycache__/
+
+# Secrets
+.env
+
+# System files
+.DS_Store
+Thumbs.db
