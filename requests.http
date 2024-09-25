@@ -25,3 +25,36 @@ Authorization: Token {{token}}
   "title": "Что-то не интересное",
   "content": "Не интересное содержание"
 }
+
+###
+
+PATCH http://localhost:8000/api/v1/articles/7/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "title": "Что-то не интересное",
+  "content": "Не интересное содержание",
+  "tags": [
+    {"name": "food", "color": "#FF5733"},
+    {"name": "travel", "color": "#33FF57"}
+  ]
+}
+
+###
+
+PATCH http://localhost:8000/api/v1/articles/6/
+Content-Type: application/json
+Authorization: Token {{token}}
+
+{
+  "title": "Что-то не интересное",
+  "content": "Не интересное содержание",
+  "tags": [
+    {"name": "technology", "color": "#FF5733"},
+    {"name": "education", "color": "#A9A9A9"}
+  ]
+}
+
+###
+

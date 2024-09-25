@@ -15,5 +15,6 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE,
                                related_name='articles')
     tags = models.ManyToManyField(Tag, related_name='articles', blank=True)
+    image = models.ImageField(upload_to='articles/', blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
